@@ -65,6 +65,10 @@ This is mart layer model which is used to access contacts data and we can access
 ##### Deduplication by email_address - 1195
 ##### Deduplication by name and phone_number - 1013
 
+#### Master contacts:
+
+[master_contacts.csv](https://github.com/sivaprakashniet/hubspot-mdm/files/13805777/master_contacts.csv)
+
 
 #### Lineage:
 
