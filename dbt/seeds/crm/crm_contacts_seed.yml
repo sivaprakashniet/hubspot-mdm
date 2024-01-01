@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: crm_contacts_seed
+    description: '{{ doc("crm_contacts_seed") }}'
+    columns:
+      - name: name
+      - name: email_address
+        tests:
+          - unique
+          - not_null
+      - name: company_name
+      - name: company_domain
+      - name: created_at
+        tests:
+          - not_null
+      - name: updated_at
+        tests:
+          - not_null

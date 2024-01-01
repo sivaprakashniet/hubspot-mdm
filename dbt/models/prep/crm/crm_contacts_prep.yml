@@ -1,0 +1,31 @@
+version: 2
+
+seeds:
+  - name: crm_contacts_prep
+    description: '{{ doc("crm_contacts_prep") }}'
+    columns:
+      - name: name
+        description: "The contact's full name"
+        
+      - name: email_address
+        description: "The contact's work email address"
+        tests:
+          - unique
+          - not_null
+      - name: favorite_color
+        description: "The contact's favorite color"
+      - name: title
+        description: "The contact's business title with their employer"
+      - name: company_name
+        description: "The name of the contact's employer"
+      - name: company_domain
+        description: "The domain name for the contact's employer "
+        
+      - name: created_at
+        description: "The date that the Contact was first created"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "The date that the Contact was most recently updated"
+        tests:
+          - not_null

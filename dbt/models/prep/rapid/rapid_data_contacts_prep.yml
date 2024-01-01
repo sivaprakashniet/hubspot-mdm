@@ -1,0 +1,29 @@
+version: 2
+
+seeds:
+  - name: rapid_data_contacts_prep
+    description: '{{ doc("rapid_data_contacts_prep") }}'
+    columns:
+      - name: name
+        description: "The contact's full name"
+      - name: email_address
+        description: "The contact's work email address"
+        tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "The name of the contact's employer"
+      - name: company_domain
+        description: "The domain name for the contact's employer"
+      - name: created_at
+        description: "The date that the Contact was first created"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "The date that the Contact was most recently updated"
+        tests:
+          - not_null
+      - name: intent_signals
+        description: "A list of all intent signals received for this contact"
+      - name: do_not_call
+        description: "A boolean indicator that the Contact does not want to be called"

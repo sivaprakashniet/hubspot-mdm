@@ -1,0 +1,25 @@
+version: 2
+
+seeds:
+  - name: acme_contacts_seed
+    description: '{{ doc("acme_contacts_seed") }}'
+    columns:
+      - name: name
+        tests:
+          - not_null
+      - name: email_address
+        tests:
+          - unique
+          - not_null
+      - name: company_name
+        tests:
+          - not_null       
+      - name: company_domain
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+      - name: updated_at
+        tests:
+          - not_null
